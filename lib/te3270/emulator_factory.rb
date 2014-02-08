@@ -1,4 +1,5 @@
 require 'te3270/emulators/extra'
+require 'te3270/emulators/passport'
 require 'te3270/emulators/quick3270'
 require 'te3270/emulators/x3270'
 
@@ -13,6 +14,8 @@ module TE3270
         extra: TE3270::Emulators::Extra,
         quick3270: TE3270::Emulators::Quick3270,
         x3270: TE3270::Emulators::X3270
+        passport: TE3270::Emulators::Passport,
+        quick3270: TE3270::Emulators::Quick3270
     }
 
     def self.emulator_for(platform)

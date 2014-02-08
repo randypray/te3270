@@ -45,6 +45,39 @@ def extra_area
   @extra_area
 end
 
+def passport_system
+  @passport_system ||= double('system')
+  @passport_system.stub(:Sessions).and_return passport_sessions
+  @passport_system.stub(:Version).and_return("0")
+  @passport_system
+end
+
+def passport_sessions
+  @passport_sessions ||= double('sessions')
+  @passport_sessions.stub(:Count).and_return 0
+  @passport_sessions.stub(:Open).and_return passport_session
+  @passport_sessions
+end
+
+def passport_session
+  @passport_session ||= double('session')
+  @passport_session.stub(:Screen).and_return passport_screen
+  @passport_session.stub(:WindowState=)
+  @passport_session.stub(:Visible=)
+  @passport_session
+end
+
+def passport_screen
+  @passport_screen ||= double('screen')
+  @passport_screen.stub(:SelectAll).and_return passport_area
+  @passport_screen
+end
+
+def passport_area
+  @passport_area ||= double('area')
+  @passport_area
+end
+
 def quick_system
   @quick_system ||= double('quick_system')
   @quick_system.stub(:ActiveSession).and_return quick_session
