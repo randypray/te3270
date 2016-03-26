@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 require 'rbconfig'
 
+gem 'win32screenshot'
 gem 'rake'
 gem 'fuubar'
 gem 'guard-rspec'
