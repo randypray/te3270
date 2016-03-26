@@ -13,9 +13,8 @@ module TE3270
     EMULATORS = {
         extra: TE3270::Emulators::Extra,
         quick3270: TE3270::Emulators::Quick3270,
-        x3270: TE3270::Emulators::X3270
-        passport: TE3270::Emulators::Passport,
-        quick3270: TE3270::Emulators::Quick3270
+        x3270: TE3270::Emulators::X3270,
+        passport: TE3270::Emulators::Passport
     }
 
     def self.emulator_for(platform)
